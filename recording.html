@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GFOG Success Session — Watch the Recording</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script src="https://fast.wistia.com/player.js" async></script>
+<script src="https://fast.wistia.com/embed/98l3ekshcn.js" async type="module"></script>
+<style>
+:root{--bg:#0a0a0a;--card:#131313;--card-border:#1e1e1e;--yellow:#F5C518;--yellow-glow:rgba(245,197,24,0.08);--yellow-border:rgba(245,197,24,0.2);--white:#fff;--grey-100:#e5e5e5;--grey-200:#d4d4d4;--grey-300:#a3a3a3;--grey-400:#737373;--grey-500:#525252;--grey-600:#404040;--grey-700:#2a2a2a;--green:#22c55e;--green-bg:rgba(34,197,94,0.1);--green-border:rgba(34,197,94,0.2);--blue:#3b82f6;--blue-bg:rgba(59,130,246,0.1);--blue-border:rgba(59,130,246,0.2);--radius:16px;--radius-sm:10px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--grey-200);font-family:'DM Sans',-apple-system,sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,0.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--card-border);padding:0 48px;height:64px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:12px}
+.nav-logo-icon{width:32px;height:32px;background:var(--yellow);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-weight:800;font-size:15px;color:var(--bg)}
+.nav-logo span{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:14px;color:var(--white);letter-spacing:-0.3px}
+.nav-link{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;color:var(--grey-400);text-decoration:none;padding:8px 16px;border:1px solid var(--card-border);border-radius:100px;transition:all .2s ease}
+.nav-link:hover{color:var(--yellow);border-color:var(--yellow-border)}
+
+.page{max-width:900px;margin:0 auto;padding:100px 32px 80px}
+.section-gap{margin-top:64px}
+.badge{display:inline-flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--card-border);padding:6px 16px;border-radius:100px;font-size:12px;font-weight:600;color:var(--grey-400);text-transform:uppercase;letter-spacing:1px;margin-bottom:16px}
+.badge .icon{color:var(--yellow)}
+h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(32px,4.5vw,48px);font-weight:700;color:var(--white);letter-spacing:-2px;line-height:1.1;margin-bottom:12px}
+h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(24px,3vw,32px);font-weight:700;color:var(--white);letter-spacing:-1px;line-height:1.15;margin-bottom:12px}
+h3{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;color:var(--white);letter-spacing:-0.3px;margin-bottom:8px}
+.highlight{color:var(--yellow)}
+.subtitle{font-size:17px;color:var(--grey-300);line-height:1.7;max-width:640px}
+
+.card{background:var(--card);border:1px solid var(--card-border);border-radius:var(--radius);padding:28px;transition:border-color .2s ease,box-shadow .3s ease,transform .3s ease}
+.card:hover{border-color:var(--grey-600);box-shadow:0 4px 24px rgba(0,0,0,0.3)}
+
+/* VIDEO with yellow glow */
+.video-wrap{margin-top:32px;border-radius:var(--radius);overflow:hidden;border:1px solid var(--yellow-border);box-shadow:0 0 40px rgba(245,197,24,0.12),0 0 80px rgba(245,197,24,0.06),0 8px 48px rgba(0,0,0,0.4)}
+wistia-player[media-id='98l3ekshcn']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/98l3ekshcn/swatch');display:block;filter:blur(5px);padding-top:56.25%}
+
+.chapters{display:flex;flex-direction:column;gap:8px;margin-top:24px}
+.chapter{display:flex;align-items:center;gap:16px;padding:14px 20px;background:var(--card);border:1px solid var(--card-border);border-radius:var(--radius-sm);cursor:pointer;transition:all .2s ease;text-decoration:none}
+.chapter:hover{border-color:var(--yellow-border);transform:translateX(4px)}
+.chapter-time{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:var(--yellow);min-width:52px;flex-shrink:0}
+.chapter-title{font-size:14px;color:var(--grey-200);font-weight:500}
+.chapter-num{font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;color:var(--grey-600);min-width:24px}
+
+.faq-list{display:flex;flex-direction:column;gap:12px;margin-top:24px}
+.faq-item{background:var(--card);border:1px solid var(--card-border);border-radius:var(--radius-sm);overflow:hidden}
+.faq-item summary{display:flex;align-items:center;gap:12px;padding:18px 24px;cursor:pointer;list-style:none;font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:600;color:var(--white);transition:color .2s ease}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::before{content:'+';font-size:18px;color:var(--grey-600);font-family:'Space Grotesk',sans-serif;font-weight:700;min-width:20px;transition:color .2s ease}
+.faq-item[open] summary::before{content:'-';color:var(--yellow)}
+.faq-item summary:hover{color:var(--yellow)}
+.faq-answer{padding:0 24px 20px;font-size:14px;color:var(--grey-400);line-height:1.7;border-top:1px solid var(--card-border);padding-top:16px}
+.faq-answer a{color:var(--yellow)}
+
+.resources-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:24px}
+.resource-card{background:var(--card);border:1px solid var(--card-border);border-radius:var(--radius-sm);padding:24px;text-decoration:none;display:block;transition:all .2s ease}
+.resource-card:hover{border-color:var(--yellow-border);transform:translateY(-2px);box-shadow:0 4px 20px rgba(0,0,0,0.3)}
+.resource-icon{font-size:28px;margin-bottom:12px}
+.resource-card h3{font-size:15px;margin-bottom:4px}
+.resource-card p{font-size:13px;color:var(--grey-400);line-height:1.6}
+
+.footer{margin-top:80px;padding-top:32px;border-top:1px solid var(--card-border);text-align:center}
+.footer p{font-size:13px;color:var(--grey-600)}
+.footer a{color:var(--grey-500);text-decoration:none}
+.footer a:hover{color:var(--yellow)}
+
+@media(max-width:600px){.page{padding:80px 16px 48px}.nav{padding:0 16px}.resources-grid{grid-template-columns:1fr}}
+
+.fade-up{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+.s1{transition-delay:.05s}.s2{transition-delay:.1s}.s3{transition-delay:.15s}.s4{transition-delay:.2s}.s5{transition-delay:.25s}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-logo"><div class="nav-logo-icon">R</div><span>GFOG Success Session</span></div>
+  <a href="index.html" class="nav-link">View Presentation</a>
+</nav>
+
+<div class="page">
+
+  <!-- HERO -->
+  <div class="fade-up">
+    <div class="badge"><span class="icon">&#127916;</span> Recording</div>
+    <h1>Watch the <span class="highlight">Success Session</span></h1>
+    <p class="subtitle">Missed the live call or want to revisit something? Here's the full recording along with answers to the most common questions.</p>
+  </div>
+
+  <!-- VIDEO -->
+  <div class="video-wrap fade-up s1">
+    <wistia-player media-id="98l3ekshcn" seo="false" aspect="1.7777777777777777"></wistia-player>
+  </div>
+
+  <!-- CHAPTERS -->
+  <div class="section-gap fade-up s2">
+    <h2>Jump to a <span class="highlight">section</span></h2>
+    <p style="font-size:14px;color:var(--grey-400);margin-bottom:8px">Click a chapter to jump straight to that part of the recording.</p>
+    <div class="chapters">
+      <div class="chapter"><span class="chapter-num">01</span><span class="chapter-time">0:00</span><span class="chapter-title">Welcome and introductions</span></div>
+      <div class="chapter"><span class="chapter-num">02</span><span class="chapter-time">2:30</span><span class="chapter-title">What we actually do for you every week</span></div>
+      <div class="chapter"><span class="chapter-num">03</span><span class="chapter-time">6:00</span><span class="chapter-title">Your 90-day roadmap</span></div>
+      <div class="chapter"><span class="chapter-num">04</span><span class="chapter-time">9:00</span><span class="chapter-title">How Google rankings work</span></div>
+      <div class="chapter"><span class="chapter-num">05</span><span class="chapter-time">13:00</span><span class="chapter-title">Live grid scan walkthrough</span></div>
+      <div class="chapter"><span class="chapter-num">06</span><span class="chapter-time">17:00</span><span class="chapter-title">Understanding your ranking updates</span></div>
+      <div class="chapter"><span class="chapter-num">07</span><span class="chapter-time">20:00</span><span class="chapter-title">Reviews and your free tap card</span></div>
+      <div class="chapter"><span class="chapter-num">08</span><span class="chapter-time">23:00</span><span class="chapter-title">Things you can do to help</span></div>
+      <div class="chapter"><span class="chapter-num">09</span><span class="chapter-time">26:00</span><span class="chapter-title">The maths, is it worth it?</span></div>
+      <div class="chapter"><span class="chapter-num">10</span><span class="chapter-time">28:00</span><span class="chapter-title">Free website builds</span></div>
+      <div class="chapter"><span class="chapter-num">11</span><span class="chapter-time">30:00</span><span class="chapter-title">Live Q&amp;A</span></div>
+    </div>
+    <p style="font-size:12px;color:var(--grey-600);margin-top:12px">Timestamps are approximate and may vary by session.</p>
+  </div>
+
+  <!-- KEY TAKEAWAYS -->
+  <div class="section-gap fade-up">
+    <h2>Key <span class="highlight">takeaways</span></h2>
+    <div style="display:flex;flex-direction:column;gap:12px;margin-top:20px">
+      <div class="card" style="display:flex;align-items:flex-start;gap:16px;padding:20px 24px">
+        <span style="font-size:20px;flex-shrink:0">&#128205;</span>
+        <div><h3 style="font-size:15px;margin-bottom:4px">Rankings take time</h3><p style="font-size:14px;color:var(--grey-400)">Google needs to trust your profile. Month one is groundwork, month two you'll see movement, month three the compound effect kicks in. The longer you stay, the stronger it gets.</p></div>
+      </div>
+      <div class="card" style="display:flex;align-items:flex-start;gap:16px;padding:20px 24px">
+        <span style="font-size:20px;flex-shrink:0">&#128247;</span>
+        <div><h3 style="font-size:15px;margin-bottom:4px">Send us your photos</h3><p style="font-size:14px;color:var(--grey-400)">Real photos of your work massively outperform stock images. We geotag them to boost your local rankings. Use the image uploader tool linked below.</p></div>
+      </div>
+      <div class="card" style="display:flex;align-items:flex-start;gap:16px;padding:20px 24px">
+        <span style="font-size:20px;flex-shrink:0">&#11088;</span>
+        <div><h3 style="font-size:15px;margin-bottom:4px">Reviews are powerful</h3><p style="font-size:14px;color:var(--grey-400)">Even 1 or 2 reviews a month puts you ahead of most competitors. Use your tap card after every job. We handle the replies to your positive reviews for you.</p></div>
+      </div>
+      <div class="card" style="display:flex;align-items:flex-start;gap:16px;padding:20px 24px">
+        <span style="font-size:20px;flex-shrink:0">&#128269;</span>
+        <div><h3 style="font-size:15px;margin-bottom:4px">Don't Google yourself from home</h3><p style="font-size:14px;color:var(--grey-400)">You'll always rank well from your own location because of proximity. The grid scan shows how customers across your whole area see you.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMMON QUESTIONS -->
+  <div class="section-gap fade-up">
+    <h2>Common <span class="highlight">questions</span></h2>
+    <p class="subtitle" style="margin-bottom:8px">These come up on almost every session. If yours isn't here, just message us.</p>
+    <div class="faq-list">
+
+      <details class="faq-item">
+        <summary>Why do my rankings change from day to day?</summary>
+        <div class="faq-answer">Google's algorithm is constantly updating. Your rankings can shift based on competitor activity, search patterns, time of day, and algorithm tweaks. Small fluctuations are completely normal. What matters is the overall trend over weeks and months, not individual days.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How long until I see results?</summary>
+        <div class="faq-answer">Most clients start seeing movement within 4 to 6 weeks, but results look different for everyone. For some people, results mean going from not showing up at all to being found in their local town. For others, it's the review replies saving them hours every week, especially if you're a restaurant or a business with a lot of reviews coming in. Some clients tell us the biggest value is just having the grid scans so they can actually see where they rank across their area. The point is, the service does different things for different businesses. The first month is always groundwork. By month two you'll see your rankings improving. Month three is where the compound effect kicks in and things really start to shift. We'd encourage you to think about what results look like for your specific situation.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Can I change my target keyword?</summary>
+        <div class="faq-answer">Yes. If your business focus has shifted or you want to target a different service, just let us know. We'll update your profile categories, description, and content strategy to match. Bear in mind it can take a few weeks for Google to re-evaluate your profile for new keywords.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Do reviews really matter that much?</summary>
+        <div class="faq-answer">Yes. Reviews are one of the strongest ranking signals Google looks at. They also convert browsers into buyers. 93% of people read reviews before choosing a local business. Consistency matters more than volume. Even 1 or 2 a month puts you ahead of most competitors.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What if a competitor outranks me?</summary>
+        <div class="faq-answer">It depends on why. Proximity plays the biggest role. If they're physically closer to where someone is searching, they'll naturally rank higher in that spot. For everything else (prominence, relevance), that's what we're working on for you every week. If you notice a specific competitor consistently outranking you, let us know and we can take a closer look.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How do I respond to a bad review?</summary>
+        <div class="faq-answer">As part of the service, we reply to all of your positive reviews for you. For negative reviews, we'd recommend you reply to those yourself because you know the situation and the customer. The key is to stay professional, acknowledge the concern, and offer to resolve it offline. Never argue publicly. A thoughtful reply to a negative review actually builds trust with potential customers who read it.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What's the best way to send you photos?</summary>
+        <div class="faq-answer">Use our image uploader tool at <a href="https://ryandoesmarketing.agency/photo-uploader" target="_blank">ryandoesmarketing.agency/photo-uploader</a>. Just enter your business name, email, and drag your photos in. Before and afters, jobs in progress, your van, your team, anything real performs way better than stock images. We geotag every photo to boost your local rankings. You'll find the link in the resources section below.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>When do I get my tap card?</summary>
+        <div class="faq-answer">We send your Google Review Tap Card out as part of your onboarding. If you haven't received yours yet, just drop us a message and we'll get one sorted for you straight away. It's included free with your service.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What are Google updates?</summary>
+        <div class="faq-answer">Every week we publish an update to your Google Business Profile. These are short pieces of content with images and keyword-rich copy that signal to Google your business is active. They appear on your profile and last about seven days, which is why we keep them rolling. These are profile updates, not social media posts.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Do you offer free website builds?</summary>
+        <div class="faq-answer">Yes. If you think your current website is struggling, or you want a new one that actually works with your Google profile, we do offer free website builds for GFOG clients. There's no build cost at all. Monthly hosting is just &#163;27 which covers hosting, security certificates, unlimited changes, SEO analysis, and blog content. It's application only, so if you're interested you can <a href="https://tally.so/r/rjE4K5" target="_blank">apply here</a>.</div>
+      </details>
+
+    </div>
+  </div>
+
+  <!-- USEFUL RESOURCES -->
+  <div class="section-gap fade-up">
+    <h2>Useful <span class="highlight">resources</span></h2>
+    <div class="resources-grid">
+      <a href="https://ryandoesmarketing.agency/photo-uploader" target="_blank" class="resource-card">
+        <div class="resource-icon">&#128247;</div>
+        <h3>Photo Uploader</h3>
+        <p>Upload your photos for us to geotag and add to your profile.</p>
+      </a>
+      <a href="https://beforeafter.ryandoesmarketing.agency/" target="_blank" class="resource-card">
+        <div class="resource-icon">&#128260;</div>
+        <h3>Before &amp; After Maker</h3>
+        <p>Turn your photos into clean side-by-side comparisons.</p>
+      </a>
+      <a href="https://pagespeed.web.dev/" target="_blank" class="resource-card">
+        <div class="resource-icon">&#9889;</div>
+        <h3>PageSpeed Test</h3>
+        <p>Test your website speed. See how Google scores your site.</p>
+      </a>
+      <a href="https://tally.so/r/rjE4K5" target="_blank" class="resource-card">
+        <div class="resource-icon">&#127760;</div>
+        <h3>Apply for a Free Website</h3>
+        <p>Application only. Fill in the form to apply for a free website build.</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p>&copy; 2026 Ryan Does Marketing. <a href="https://ryandoesmarketing.co.uk" target="_blank">ryandoesmarketing.co.uk</a></p>
+  </div>
+
+</div>
+
+<script>
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-up').forEach(function(el) { observer.observe(el); });
+</script>
+</body>
+</html>
